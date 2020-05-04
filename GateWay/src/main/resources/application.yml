@@ -1,0 +1,26 @@
+server:
+  port: 1112
+spring:
+  application:
+    name: api-gateway
+#  cloud:
+#    gateway:
+#      routes:
+#      - id: gateway-service
+#        uri: https://blog.csdn.net
+#        predicates:
+#          - Path=/meteor_93
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
